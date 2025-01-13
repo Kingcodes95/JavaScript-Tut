@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <h3>Rock Paper Scissors</h3>
+    <button onclick="
+
+        playerChoice = 'Rock';
+
+        let randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber <= 1/3) {
+            botChoice = 'Rock';
+            console.log('The bot choose: Rock');
+        } else if (randomNumber > 1/3 && randomNumber <= 2/3) {
+            botChoice = 'Paper';
+            console.log('The bot choose: Paper');
+        } else if (randomNumber > 2/3 && randomNumber <= 1) {
+            botChoice = 'Scissors';
+            console.log('The bot choose: Scissors');
+        }
+
+        if (playerChoice === 'Rock' && botChoice === 'Rock') {
+            console.log('Tie!');
+        } else if (playerChoice ==='Rock' && botChoice === 'Paper') {
+            botScore++;
+            console.log('Bot Wins!');
+            console.log(playerScore);
+            console.log(botScore);
+        } else if (playerChoice === 'Rock' && botChoice === 'Scissors') {
+            playerScore++;
+            console.log('Player Wins!');
+            console.log(playerScore);
+            console.log(botScore);
+        }
+
+        playerChoice = '';
+        botChoice = '';
+
+    ">Rock</button>
+    <button onclick="
+
+        playerChoice = 'Paper';
+
+        randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber <= 1/3) {
+            botChoice = 'Rock';
+            console.log('The bot choose: Rock');
+        } else if (randomNumber > 1/3 && randomNumber <= 2/3) {
+            botChoice = 'Paper';
+            console.log('The bot choose: Paper');
+        } else if (randomNumber > 2/3 && randomNumber <= 1) {
+            botChoice = 'Scissors';
+            console.log('The bot choose: Scissors');
+        }
+
+        if (playerChoice === 'Paper' && botChoice === 'Rock') {
+            playerScore++;
+            console.log('Player Wins!');
+            console.log(playerScore);
+            console.log(botScore);
+        } else if (playerChoice ==='Paper' && botChoice === 'Paper') {
+            console.log('Tie!');
+        } else if (playerChoice === 'Paper' && botChoice === 'Scissors') {
+            botScore++;
+            console.log('Bot Wins!');
+            console.log(playerScore);
+            console.log(botScore);
+        }
+
+        playerChoice = '';
+        botChoice = '';
+
+    ">Paper</button>
+
+    <button onclick="
+
+
+        playerChoice = 'Scissors';
+
+        randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber <= 1/3) {
+            botChoice = 'Rock';
+            console.log('The bot choose: Rock');
+        } else if (randomNumber > 1/3 && randomNumber <= 2/3) {
+            botChoice = 'Paper';
+            console.log('The bot choose: Paper');
+        } else if (randomNumber > 2/3 && randomNumber <= 1) {
+            botChoice = 'Scissors';
+            console.log('The bot choose: Scissors');
+        }
+
+        if (playerChoice === 'Scissors' && botChoice === 'Rock') {
+            botScore++;
+            console.log('Bot Wins!');
+            console.log(playerScore);
+            console.log(botScore);
+        } else if (playerChoice ==='Scissors' && botChoice === 'Paper') {
+            playerScore++;
+            console.log('Player Wins!');
+            console.log(playerScore);
+            console.log(botScore);
+        } else if (playerChoice === 'Scissors' && botChoice === 'Scissors') {
+            console.log('Tie!');
+        }
+
+        playerChoice = '';
+        botChoice = '';
+
+
+    ">Scissors</button>
+
+    <button onclick="
+        console.log(playerScore);
+        console.log(botScore);
+    ">Scores</button>    
+
+    <button onclick="
+        playerScore = 0;
+        botScore = 0;
+    ">Reset</button>
+
+    <script>
+        let playerChoice = '';
+        let botChoice = '';
+
+        let playerScore = 0;
+        let botScore = 0;
+
+
+    </script>
+
+</body>
+</html>
